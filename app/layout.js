@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ParticlesBackground from "@/components/particlebg";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const metadata = {
   title: "Yash's Portfolio",
