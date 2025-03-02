@@ -3,12 +3,13 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const AboutMeWidget = () => {
   return (
     <motion.div
-      initial={{ opacity: 0,scale: 0 }}
-      animate={{ opacity: 1,scale: 1 }}
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{
         duration: 0.1,
         // repeat: Infinity,
@@ -16,7 +17,7 @@ const AboutMeWidget = () => {
         // ease: "easeInOut",
       }}
       // title="Click to know more about me "
-      className="w-[40%] flex shadow-lg shadow-white/10 flex-col h-[60%] bg-white/10 backdrop-blur-xl rounded-3xl mt-2 p-4 border border-white/20 transition-all duration-500 ease-in-out"
+      className="w-[40%] select-none flex shadow-lg shadow-white/10 flex-col justify-start items-center min-h-[60%] bg-white/10 backdrop-blur-xl rounded-3xl mt-2 p-4 border border-white/20 transition-all duration-500 ease-in-out"
     >
       {/* Profile Photo Section */}
       <div className="flex flex-col justify-center items-center w-full bg-gradient-to-r from-gray-900 to-gray-700 h-[30%] rounded-t-2xl">
@@ -37,10 +38,12 @@ const AboutMeWidget = () => {
           hic. Laboriosam illum ex, perspiciatis ipsum fugit praesentium aut
           accusantium quis at obcaecati doloribus.
         </p>
-        <div className="btn mt-2">
-          <Button className="px-10 py-2 rounded-full bg-white/20 backdrop-blur-md text-white shadow-lg border border-white/30 hover:bg-white hover:text-black hover:shadow-xl transition-all duration-300 ease-in-out">
-            More
-          </Button>
+        <div className="btn mt-5">
+          <Link href={"/about"}>
+            <Button className="px-10 py-2 rounded-full bg-white/20 backdrop-blur-md text-white shadow-lg border border-white/30 hover:bg-white hover:text-black hover:shadow-xl transition-all duration-300 ease-in-out">
+              More
+            </Button>
+          </Link>
         </div>
       </div>
     </motion.div>
