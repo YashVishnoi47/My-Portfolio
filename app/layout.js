@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <div className="min-h-screen relative text-white">
           <ParticlesBackground />
           <Navbar />
-          <main className="absolute inset-0">{children}</main>
+          <main className="absolute inset-0 overflow-hidden">{children}</main>
         </div>
       </body>
     </html>

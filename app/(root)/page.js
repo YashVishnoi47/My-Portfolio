@@ -1,46 +1,52 @@
 import DekstopIcon from "@/components/dekstopComponents/DekstopIcon";
 import AboutMeWidget from "@/components/dekstopComponents/AboutMeWidget";
 import Dock from "@/components/utilityComponents/Doc";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram,FaYoutube  } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 // When I am on home page I have social icons as bottom doc but on other pages I have proper navigation doc.
 
 export default function Home() {
-  const items = [
+  const docItems = [
     {
       icon: <FaInstagram size={20} />,
       label: "Instagram",
-      link:"https://www.instagram.com/yashss.realm/"
+      link: "https://www.instagram.com/yashss.realm/",
     },
     {
       icon: <FaYoutube size={20} />,
       label: "Youtube",
-      link:"https://www.youtube.com/@yashssrealm"
+      link: "https://www.youtube.com/@yashssrealm",
     },
     {
       icon: <FaXTwitter size={20} />,
       label: "X(Twitter)",
-      link:"https://x.com/home"
+      link: "https://x.com/home",
     },
     {
       icon: <FaGithub size={20} />,
       label: "GitHub",
-      link:"https://github.com/YashVishnoi47"
+      link: "https://github.com/YashVishnoi47",
     },
   ];
 
   return (
     <div className="relative flex justify-between inset-0 w-full h-full">
+      {/* Bottom Doc */}
       <Dock
-        items={items}
+        items={docItems}
         panelHeight={68}
         baseItemSize={50}
         magnification={70}
         className={"bg-white/10 backdrop-blur-lg"}
       />
 
-      {/* <SocialWidget /> */}
       <div className="icons mt-10 w-1/2 p-2 flex flex-col gap-4 flex-wrap h-[94%]">
         {/* Projects */}
         <DekstopIcon
@@ -57,7 +63,7 @@ export default function Home() {
         {/* Skills */}
         {/* <DekstopIcon url={"/skills"} imageURL={"/icons/contact.png"} text={"Contact me"} /> */}
       </div>
-
+      {/* About me Widget */}
       <div className="Widgets mt-10 w-1/2 p-2 justify-end items-start  flex gap-4 flex-wrap h-[94%]">
         <AboutMeWidget />
       </div>

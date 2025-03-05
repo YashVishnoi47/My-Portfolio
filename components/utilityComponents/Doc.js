@@ -151,9 +151,8 @@ export default function Dock({
         aria-label="Application dock"
       >
         {items.map((item, index) => (
-          <Link target="_blank" href={item.link}>
+          <Link key={index} target="_blank" href={item.link}>
             <DockItem
-              key={index}
               onClick={item.onClick}
               className={item.className}
               mouseX={mouseX}

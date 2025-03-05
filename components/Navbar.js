@@ -7,12 +7,10 @@ import Clock from "./Clock";
 import { motion } from "framer-motion";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import Battery from "./utilityComponents/Battery";
 
 
-// Left side of the navbar will have the navigation buttons-
-//  1. The name of the page the user is at.
-//  2. The buttons to go back and close the page.(Basically go to home page)
-//  3. The Bution to minimize the page.(Impliment it at the end)
+
 
 const Navbar = () => {
   const router = useRouter();
@@ -63,9 +61,9 @@ const Navbar = () => {
       </div>
 
       {/* Navbar Right */}
-      <div className="right flex justify-end border-2 border-red-500 items-center h-full w-[33%] ">
-        <div className="socials flex justify-center items-center gap-2 border-2 h-full w-[50%]">
-          <FaInstagram className="rounded-full text-2xl hover:scale-110 transition-all duration-200 ease-in-out"/>
+      <div className="right flex justify-end border-2  items-center h-full w-[33%] ">
+        <div className="socials flex justify-center items-center gap-2  h-full w-[50%]">
+          {/* <Battery/> */}
         </div>
       </div>
     </motion.div>

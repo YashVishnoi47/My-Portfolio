@@ -10,6 +10,8 @@ const AboutMeWidget = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
+      // initial={{ x: 200 }}
+      // animate={{ x: -0 }}
       transition={{
         duration: 0.1,
         // repeat: Infinity,

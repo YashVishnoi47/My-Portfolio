@@ -23,7 +23,7 @@ const DekstopIcon = ({ url, imageURL, text }) => {
       transition={{
         duration: 0.2,
       }}
-      whileHover={{  boxShadow: "0px 0px 18px rgba(255, 255, 255, 0.3)" }}
+      whileTap={{  boxShadow: "0px 0px 18px rgba(255, 255, 255, 0.3)" }}
       onClick={handleClick}
       onDoubleClick={handleDoubleClick}
       className="w-20 h-20 cursor-pointer border-gray-500  select-none rounded-xl hover:bg-white hover:bg-opacity-10 hover:backdrop-blur-md gap-2 flex flex-col justify-center items-center transition-all duration-200 ease-in-out"
